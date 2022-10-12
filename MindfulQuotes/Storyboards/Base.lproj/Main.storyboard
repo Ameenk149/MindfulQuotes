@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quotes View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="quotesViewController" id="BYZ-38-t0r" customClass="QuotesViewController" customModule="MindfulQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Fh0-1w-GOx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting a new quote...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weu-Aw-Izg">
+                                <rect key="frame" x="41.5" y="110" width="331" height="28"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-tL-QVM">
+                                <rect key="frame" x="20.5" y="792" width="373" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ydE-aV-WAP"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get a new Quote"/>
+                                <connections>
+                                    <action selector="quoteButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bpt-bS-GOj"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="giY-XM-vVE">
+                                <rect key="frame" x="111.5" y="64" width="191" height="32"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="French"/>
+                                    <segment title="Dutch"/>
+                                </segments>
+                                <connections>
+                                    <action selector="languageSegmentedControlValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="OqS-G5-x8I"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hMK-tL-QVM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="2Aj-he-8ZG"/>
+                            <constraint firstItem="weu-Aw-Izg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="73Z-ny-MIL"/>
+                            <constraint firstItem="Fh0-1w-GOx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7zB-me-bAN"/>
+                            <constraint firstItem="weu-Aw-Izg" firstAttribute="top" secondItem="giY-XM-vVE" secondAttribute="bottom" constant="15" id="8zJ-Qs-PnW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fh0-1w-GOx" secondAttribute="trailing" id="9J0-1U-ucT"/>
+                            <constraint firstItem="Fh0-1w-GOx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MfW-rT-uuq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hMK-tL-QVM" secondAttribute="bottom" constant="20" id="TsD-68-bfs"/>
+                            <constraint firstItem="giY-XM-vVE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YbF-cY-hkT"/>
+                            <constraint firstItem="giY-XM-vVE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="oLQ-qt-2NE"/>
+                            <constraint firstItem="Fh0-1w-GOx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ofI-LJ-y5D"/>
+                            <constraint firstItem="hMK-tL-QVM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pnY-g9-Co9"/>
+                            <constraint firstItem="weu-Aw-Izg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="tIE-Eu-xhy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quote" destination="weu-Aw-Izg" id="kVC-Uz-Hs7"/>
+                        <outlet property="quoteButton" destination="hMK-tL-QVM" id="vkE-vo-M2V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="12.723214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="473" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
